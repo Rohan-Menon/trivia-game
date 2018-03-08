@@ -1,13 +1,16 @@
 
 #trivia-space{
-    background-color: rgb(231, 146, 217);
+    background-image: linear-gradient(45deg, #fc6b70 0%, #fac4ea 99%, #ffd6ff 100%);
     width:970px;
     height: 600px;
     margin-left:250px;
+    margin-top:50px;
     position: relative;
 }
 
 #startButton{
+    color:#ffffff;
+    background-color: #5a5151;
     position:absolute;
     font-size: 100px;
     border: 5px solid #000000;
@@ -17,7 +20,7 @@
     left: 335px;
 }
 #answerDiv{
-    color:rgb(6, 255, 89);
+    color:#ffffff;
 }
 
 #displayTimer{
@@ -27,7 +30,7 @@
 
 #question{
     margin-left:200px;
-    width: 400px;
+    width: 600px;
     font-size: 40px;
 }
 
@@ -36,5 +39,54 @@
     width:250;
     margin-left:325px;
 }
+
+.successDisplay{
+    font-size:80px;
+    color:#26ad31;
+    padding-left:200px;
+    margin-top:200px;
+}
+
+.wrongDisplay{
+    font-size:80px;
+    color:#ff0000;
+    padding-left:350px;
+    margin-top:200px;
+}
+
+.timeOutDisplay{
+    font-size:80px;
+    color:#ff0000;
+    padding-left:250px;
+    margin-top:200px;
+
+}
+
+.correctAnswer{
+    padding-left: 200px;
+}
+
+#resultHeader{
+    font-size:80px;
+    margin-left:350px;
+}
+
+.resultStats{
+    font-size: 50px;
+    margin-top:20px;
+    margin-left:275px;
+}
+
+#restart{
+    font-size: 80px;
+    padding-left:10px;
+    background-color: rgba(197, 161, 189, 0.863);
+    border: 5px solid #000000;
+    margin-left:275px;
+    width:400px;
+}
+
+
+
 
 

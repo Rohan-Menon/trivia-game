@@ -94,7 +94,7 @@ function outOfTime(){
 
     $("#answerDiv").remove();
     $("#question").remove();
-    $("#trivia-space").append("<h2>Out of timE!<h2/>");
+    $("#trivia-space").append("<h2 class='timeOutDisplay'>Out of time!<h2/>");
     questionNumber++;
 
     if(questionNumber===triviaQuestions.length)
@@ -128,6 +128,8 @@ function checkAnswer(){
     if(answerIndex===triviaQuestions[questionNumber].correct)
     {
         correct++;
+        successDisplay.addClass("successDisplay");
+
         successDisplay.text("You Got it Right!");
         $("#trivia-space").append(successDisplay);
 
@@ -135,8 +137,10 @@ function checkAnswer(){
     else{
         incorrect++;
         successDisplay.text("Wrong")
+        successDisplay.addClass("wrongDisplay")
         var correctAnswerDisplay = $("<h2>")
         correctAnswerDisplay.text("The right answer was: " +triviaQuestions[questionNumber].answers[triviaQuestions[questionNumber].correct]);
+        correctAnswerDisplay.addClass("correctAnswer");
         $("#trivia-space").append(successDisplay);
         $("#trivia-space").append(correctAnswerDisplay);
 
@@ -206,11 +210,11 @@ function nextQuestion(){
 function displayResults(){
     var triviaSpace = $("#trivia-space");
     triviaSpace.empty();
-    triviaSpace.append("<h2>Results<h2/>");
-    triviaSpace.append("<p>Correct Answers: " +correct);
-    triviaSpace.append("<p>Wrong Answers: " +incorrect);
-    triviaSpace.append("<p>Unanswered: " +unanswerd);
-    triviaSpace.append("<button id='restart'>Try Again?<button/>");
+    triviaSpace.append("<h2 id='resultHeader'>Results<h2/>");
+    triviaSpace.append("<p class='resultStats'>Correct Answers: " +correct);
+    triviaSpace.append("<p class='resultStats'>Wrong Answers: " +incorrect);
+    triviaSpace.append("<p class='resultStats'>Unanswered: " +unanswerd);
+    triviaSpace.append("<p id='restart'>Try Again?<p/>");
 
 
 }
